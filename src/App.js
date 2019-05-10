@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import MovieList from "./components/MovieList" 
+import withLoading from "./components/HOC/withLoading"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class extends React.Component{
+constructor(props)
+{
+  super(props)
+  this.state={
+    isLoading:true
+  }
 }
 
-export default App;
+
+componentDidMount(){
+  setTimeout(() => {
+    this.setState({
+      isLoading:false,
+    })
+  }, 5000);
+
+
+}
+
+render(){
+  const Wrapped = withLoading(MovieList)
+  return (
+    <div>
+      <Wrapped isLoading={this.state.isLoading} />
+    </div>
+  );}
+}
+

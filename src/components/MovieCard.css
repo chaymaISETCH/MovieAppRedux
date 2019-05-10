@@ -1,0 +1,57 @@
+.card {
+    margin-top: 50px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.62);
+    transition: 1s;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+}
+.edit,.delete{
+    width:20px;
+    margin-left:10px;
+
+}
+.edit{margin-left: -50px;}
+.film-image{
+    width:100%;
+}
+
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.stars{
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+.stars svg{
+    padding: 25px 5px;
+    width: 10px;
+}
+.plus{
+    display:flex
+}
+.plus button{
+    font-size: 100px;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+}
+.card-header{
+    display: flex;
+    top: 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-container {
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background-color: #00000066;
+    color: white;
+    overflow: hidden;
+    height: 20%;
+}

@@ -1,0 +1,33 @@
+
+/****** Style Star Rating Widget *****/
+
+
+/* hide radio */
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  content: "";
+  
+}
+
+.rating{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: -15px;
+}
+.rating > label { 
+ color: #ddd; 
+ width: 20px;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 

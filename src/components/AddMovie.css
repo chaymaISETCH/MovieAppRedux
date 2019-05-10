@@ -1,0 +1,35 @@
+.addContainer{
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    /* margin: auto; */
+    /* display: none; */
+    position: fixed;
+    top: 30%;}
+
+.subContainer{  display: none;
+    position: relative;
+    margin: auto;
+    background-color: #e4ded4;
+    box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.62);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 15px;}
+.close{
+    background-color: red;
+    top: 0;
+    position: absolute;
+    margin: 0;
+    align-self: flex-end;
+   
+    right: 0;
+}
+.add{   margin-top: 20px;
+    background-color: #9E9E9E;
+    padding: 10px 50px;
+    
+    border-radius: 10px;
+    border: 1px solid #9E9E9E;
+    color: white;}
